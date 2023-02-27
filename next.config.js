@@ -16,12 +16,12 @@ const nextConfig = {
           destination: "https://docs.google.com/spreadsheets/d/1iaRQXr6bAcFuk9FJSjmtAx8DenxLiW4r0BQsq5sBQNw/edit#gid=0"
         },
         {
-          source: "https://elastic.achtsamkeitsakademie.de/:slug*",
+          source: "/:slug*",
           destination:
             "https://9fb28265c03642edb170cbf9b66089a1.eu-central-1.aws.cloud.es.io:9243/:slug*",
         },
         {
-          source: "https://elastic.achtsamkeitsakademie.de/",
+          source: "/",
           destination:
             "https://9fb28265c03642edb170cbf9b66089a1.eu-central-1.aws.cloud.es.io:9243",
         },
