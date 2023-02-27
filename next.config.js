@@ -24,6 +24,11 @@ const nextConfig = {
             "https://app.asana.com/read-only/CW-M-Protokoll/470860460277661/59ab03b543307e56960d8a08c1a5e69c/list",
         },
         {
+          source: "/copywriting/zoom",
+          destination:
+            "https://schab-holding.zoom.us/j/8951914236?pwd=Wm11cmozSjk0ckFxamJuWERBejlPQT09",
+        },
+        {
           source: "/:slug*",
           destination:
             "https://9fb28265c03642edb170cbf9b66089a1.eu-central-1.aws.cloud.es.io:9243/:slug*",
