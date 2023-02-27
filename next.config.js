@@ -4,15 +4,28 @@ const nextConfig = {
     return {
       beforeFiles: [
         {
-          source: "/:slug*",
+          source: "/marketing-monday/zoom",
+          destination: "https://schab-holding.zoom.us/j/89382276677?pwd=K084YkE4QmFGdmdUNEJyTnpuWlMzdz09"
+        },
+        {
+          source: "/marketing-monday/asana",
+          destination: "https://app.asana.com/read-only/M-M-Protokoll/470860460277661/cd823fa58ce24182d4c3606c77e66382/list"
+        },
+        {
+          source: "/marketing-monday/kpi",
+          destination: "https://docs.google.com/spreadsheets/d/1iaRQXr6bAcFuk9FJSjmtAx8DenxLiW4r0BQsq5sBQNw/edit#gid=0"
+        },
+        {
+          source: "https://elastic.achtsamkeitsakademie.de/:slug*",
           destination:
             "https://9fb28265c03642edb170cbf9b66089a1.eu-central-1.aws.cloud.es.io:9243/:slug*",
         },
         {
-          source: "/",
+          source: "https://elastic.achtsamkeitsakademie.de/",
           destination:
             "https://9fb28265c03642edb170cbf9b66089a1.eu-central-1.aws.cloud.es.io:9243",
         },
+        
       ],
     };
   },
