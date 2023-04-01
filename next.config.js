@@ -12,7 +12,7 @@ const nextConfig = {
           },
         ],
         permanent: false,
-        destination: 'https://google.com/bdg',
+        destination: 'https://dfl0.us/s/1dc08470',
       },
       {
         source: '/akmc',
@@ -24,7 +24,7 @@ const nextConfig = {
           },
         ],
         permanent: false,
-        destination: 'https://google.com/big',
+        destination: 'https://dfl0.us/s/cee53aee',
       },
       {
         source: '/akmc',
@@ -36,12 +36,12 @@ const nextConfig = {
           },
         ],
         permanent: false,
-        destination: 'https://google.com/cdg',
+        destination: 'https://dfl0.us/s/1e804926',
       },
       {
         source: '/akmc',
         permanent: false,
-        destination: 'https://microsoft.com/',
+        destination: 'https://dfl0.us/s/6cb9190b',
       },
     ];
   },
