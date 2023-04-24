@@ -10,6 +10,7 @@ export function middleware(request: NextRequest) {
   ) {
     if (request.nextUrl.pathname === "/heute") {
       const now = Math.floor(Date.now() / 1000);
+      // Timestamp is second Day of ME 2023
       if (now < 1682389800) {
         return NextResponse.redirect(
           "https://meditationsexperiment.de/2023/tag-1"
