@@ -1,5 +1,91 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [
+      {
+        source: '/akmc',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'bdg',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/1dc08470',
+      },
+      {
+        source: '/akmc',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'big',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/cee53aee',
+      },
+      {
+        source: '/akmc',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'cdg',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/1e804926',
+      },
+      {
+        source: '/akmc',
+        permanent: false,
+        destination: 'https://dfl0.us/s/6cb9190b',
+      },
+      {
+        source: '/akmc-tour',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'bdg',
+          },
+        ],
+        permanent: false,
+        destination: 'https://peter-beer.de/webinar/angst-loslassen/bdg/produkttour-kurs',
+      },
+      {
+        source: '/akmc-tour',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'big',
+          },
+        ],
+        permanent: false,
+        destination: 'https://peter-beer.de/webinar/angst-loslassen/big/produkttour-kurs',
+      },
+      {
+        source: '/akmc-tour',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'cdg',
+          },
+        ],
+        permanent: false,
+        destination: 'https://peter-beer.de/webinar/angst-loslassen/cdg/produkttour-kurs',
+      },
+      {
+        source: '/akmc-tour',
+        permanent: false,
+        destination: 'https://peter-beer.de/webinar/angst-loslassen/produkttour-kurs',
+      },
+    ];
+  },
   async rewrites() {
     return {
       beforeFiles: [
