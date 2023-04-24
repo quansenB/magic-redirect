@@ -8,7 +8,7 @@ export function middleware(request: NextRequest) {
     request.nextUrl.host === "magic-redirects.achtsamkeitsakademie.de" ||
     request.nextUrl.host === "localhost:3000"
   ) {
-    if (request.nextUrl.pathname === "/heute") {
+    if (request.nextUrl.pathname === "/meditationsexperiment/heute") {
       const now = Math.floor(Date.now() / 1000);
       // Timestamp is second Day of ME 2023
       if (now < 1682389800) {
