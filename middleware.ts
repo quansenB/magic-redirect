@@ -10,40 +10,22 @@ export function middleware(request: NextRequest) {
   ) {
     if (request.nextUrl.pathname === "/meditationsexperiment/heute") {
       const now = Math.floor(Date.now() / 1000);
+      let path = "https://meditationsexperiment.de/2023/tag-7";
       // Timestamp is second Day of ME 2023
       if (now < 1682389800) {
-        return NextResponse.redirect(
-          "https://meditationsexperiment.de/2023/tag-1"
-        );
+        path = "https://meditationsexperiment.de/2023/tag-1";
+      } else if (now < 1682389800 + 86400) {
+        path = "https://meditationsexperiment.de/2023/tag-2";
+      } else if (now < 1682389800 + 86400 * 2) {
+        path = "https://meditationsexperiment.de/2023/tag-3";
+      } else if (now < 1682389800 + 86400 * 3) {
+        path = "https://meditationsexperiment.de/2023/tag-4";
+      } else if (now < 1682389800 + 86400 * 4) {
+        path = "https://meditationsexperiment.de/2023/tag-5";
+      } else if (now < 1682389800 + 86400 * 5) {
+        path = "https://meditationsexperiment.de/2023/tag-6";
       }
-      if (now < 1682389800 + 86400) {
-        return NextResponse.redirect(
-          "https://meditationsexperiment.de/2023/tag-2"
-        );
-      }
-      if (now < 1682389800 + 86400 * 2) {
-        return NextResponse.redirect(
-          "https://meditationsexperiment.de/2023/tag-3"
-        );
-      }
-      if (now < 1682389800 + 86400 * 3) {
-        return NextResponse.redirect(
-          "https://meditationsexperiment.de/2023/tag-4"
-        );
-      }
-      if (now < 1682389800 + 86400 * 4) {
-        return NextResponse.redirect(
-          "https://meditationsexperiment.de/2023/tag-5"
-        );
-      }
-      if (now < 1682389800 + 86400 * 5) {
-        return NextResponse.redirect(
-          "https://meditationsexperiment.de/2023/tag-6"
-        );
-      }
-      return NextResponse.redirect(
-        "https://meditationsexperiment.de/2023/tag-7"
-      );
+      return NextResponse.redirect(path + request.nextUrl.search);
     }
   }
 }
