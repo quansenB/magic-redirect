@@ -2,6 +2,90 @@
 const nextConfig = {
   async redirects() {
     return [
+      // EFPMC
+      {
+        source: '/efpmc',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'WBR-IWI-FQZ-OES',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/238772cd',
+      },
+      {
+        source: '/efpmc',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'WBR-61X-XYR-GS7',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/eb1a3cf5',
+      },
+      {
+        source: '/efpmc',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'WBR-MS4-PWL-ZV9',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/510158cb',
+      },
+      {
+        source: '/efpmc',
+        permanent: false,
+        destination: 'https://dfl0.us/s/277f2ace',
+      },
+      {
+        source: '/efpmc-tour',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'WBR-IWI-FQZ-OES',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/7b0b4136',
+      },
+      {
+        source: '/efpmc-tour',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'WBR-61X-XYR-GS7',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/156465c8',
+      },
+      {
+        source: '/efpmc-tour',
+        has: [
+          {
+            type: 'query',
+            key: 'var',
+            value: 'WBR-MS4-PWL-ZV9',
+          },
+        ],
+        permanent: false,
+        destination: 'https://dfl0.us/s/d18cafb8',
+      },
+      {
+        source: '/efpmc-tour',
+        permanent: false,
+        destination: 'https://dfl0.us/s/3d71ec46',
+      },
+      // AKMC
       {
         source: '/akmc',
         has: [
