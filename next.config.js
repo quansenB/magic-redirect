@@ -13,7 +13,7 @@ const nextConfig = {
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/238772cd',
+        destination: 'https://dfl0.us/s/7b0b4136',
       },
       {
         source: '/efpmc',
@@ -54,7 +54,7 @@ const nextConfig = {
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/7b0b4136',
+        destination: 'https://dfl0.us/s/238772cd',
       },
       {
         source: '/efpmc-tour',
