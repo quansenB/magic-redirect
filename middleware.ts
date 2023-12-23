@@ -27,5 +27,15 @@ export function middleware(request: NextRequest) {
       }
       return NextResponse.redirect(path + request.nextUrl.search);
     }
+  } else {
+    if (request.nextUrl.host === "magic-redirects.vercel.app") {
+      if (request.nextUrl.pathname === "/rauhnachts-zeremonie-live") {
+        if ((Math.random() > 0.5)) {
+          return NextResponse.redirect("https://zoom.com/1");
+        } else {
+          return NextResponse.redirect("https://zoom.com/1");
+        }
+      }
+    }
   }
 }
