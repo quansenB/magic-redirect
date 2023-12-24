@@ -27,14 +27,12 @@ export function middleware(request: NextRequest) {
       }
       return NextResponse.redirect(path + request.nextUrl.search);
     }
-  } else {
-    if (request.nextUrl.host === "magic-redirects.vercel.app") {
-      if (request.nextUrl.pathname === "/rauhnachts-zeremonie-live") {
-        if ((Math.random() > 0.5)) {
-          return NextResponse.redirect("https://zoom.com/1");
-        } else {
-          return NextResponse.redirect("https://zoom.com/2");
-        }
+  } else if (request.nextUrl.host === "magic-redirects.vercel.app") {
+    if (request.nextUrl.pathname === "/rauhnachts-zeremonie-live") {
+      if (Math.random() > 0.5) {
+        return NextResponse.redirect("https://zoom.us/j/94238442379?pwd=ZXVtZmtOcE9pMmtKS1JsZkxPVGpBZz09");
+      } else {
+        return NextResponse.redirect("https://us06web.zoom.us/j/89475167160?pwd=OcJVjUtQ5fbaOpojMha58zrNSUfTcb.1");
       }
     }
   }
