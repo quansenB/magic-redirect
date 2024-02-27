@@ -3,23 +3,23 @@ const nextConfig = {
   async redirects() {
     return [
       // AA Angebot
-      {
-        source: '/aa-angebot',
-        has: [
-          {
-            type: 'query',
-            key: 'teilnehmer',
-            value: 'yes',
-          },
-        ],
-        permanent: true,
-        destination: 'https://achtsamkeitsakademie.de/angebot/jammerfasten',
-      },
-      {
-        source: '/aa-angebot',
-        permanent: true,
-        destination: 'https://achtsamkeitsakademie.de/angebot/mitgliedschaft',
-      },
+      // {
+      //   source: '/aa-angebot',
+      //   has: [
+      //     {
+      //       type: 'query',
+      //       key: 'teilnehmer',
+      //       value: 'yes',
+      //     },
+      //   ],
+      //   permanent: true,
+      //   destination: 'https://achtsamkeitsakademie.de/angebot/jammerfasten',
+      // },
+      // {
+      //   source: '/aa-angebot',
+      //   permanent: true,
+      //   destination: 'https://achtsamkeitsakademie.de/angebot/mitgliedschaft',
+      // },
       // EFPMC
       {
         source: '/efpmc',

@@ -8,7 +8,15 @@ export function middleware(request: NextRequest) {
     request.nextUrl.host === "magic-redirects.achtsamkeitsakademie.de" ||
     request.nextUrl.host === "localhost:3000"
   ) {
-    if (request.nextUrl.pathname === "/meditationsexperiment/heute") {
+    if (request.nextUrl.pathname === "/aa-angebot") {
+      // Timestamp is second Day of ME 2023
+      let path = "https://achtsamkeitsakademie.de/angebot/mitgliedschaft";
+      if (request.nextUrl.search?.teilnehmer === "yes") {
+        path = "https://achtsamkeitsakademie.de/angebot/jammerfasten";
+      }
+      delete request.nextUrl.search.teilnehmer;
+      return NextResponse.redirect(path + request.nextUrl.search);
+    } else if (request.nextUrl.pathname === "/meditationsexperiment/heute") {
       const now = Math.floor(Date.now() / 1000);
       let path = "https://meditationsexperiment.de/2023/tag-7";
       // Timestamp is second Day of ME 2023
@@ -30,9 +38,13 @@ export function middleware(request: NextRequest) {
   } else if (request.nextUrl.host === "magic-redirects.vercel.app") {
     if (request.nextUrl.pathname === "/rauhnachts-zeremonie-live") {
       if (Math.random() > 0.5) {
-        return NextResponse.redirect("https://zoom.us/j/94238442379?pwd=ZXVtZmtOcE9pMmtKS1JsZkxPVGpBZz09");
+        return NextResponse.redirect(
+          "https://zoom.us/j/94238442379?pwd=ZXVtZmtOcE9pMmtKS1JsZkxPVGpBZz09"
+        );
       } else {
-        return NextResponse.redirect("https://us06web.zoom.us/j/89475167160?pwd=OcJVjUtQ5fbaOpojMha58zrNSUfTcb.1");
+        return NextResponse.redirect(
+          "https://us06web.zoom.us/j/89475167160?pwd=OcJVjUtQ5fbaOpojMha58zrNSUfTcb.1"
+        );
       }
     }
   }
