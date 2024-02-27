@@ -1,21 +1,22 @@
 // middleware.ts
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
 
 // This function can be marked `async` if using `await` inside
-export function middleware(request: NextRequest) {
+export function middleware(request) {
   if (
     request.nextUrl.host === "magic-redirects.achtsamkeitsakademie.de" ||
     request.nextUrl.host === "localhost:3000"
   ) {
     if (request.nextUrl.pathname === "/aa-angebot") {
-      // Timestamp is second Day of ME 2023
+      // console.log(request.nextUrl.search);
+      const params = new URLSearchParams(request.nextUrl.search);
+      // console.log(params);
       let path = "https://achtsamkeitsakademie.de/angebot/mitgliedschaft";
-      if (request.nextUrl.search?.teilnehmer === "yes") {
+      if (params.teilnehmer === "yes") {
         path = "https://achtsamkeitsakademie.de/angebot/jammerfasten";
       }
-      delete request.nextUrl.search.teilnehmer;
-      return NextResponse.redirect(path + request.nextUrl.search);
+      delete params?.teilnehmer;
+      return NextResponse.redirect(path + params.toString());
     } else if (request.nextUrl.pathname === "/meditationsexperiment/heute") {
       const now = Math.floor(Date.now() / 1000);
       let path = "https://meditationsexperiment.de/2023/tag-7";
