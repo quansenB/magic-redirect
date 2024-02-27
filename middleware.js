@@ -12,10 +12,10 @@ export function middleware(request) {
       const params = new URLSearchParams(request.nextUrl.search);
       // console.log(params);
       let path = "https://achtsamkeitsakademie.de/angebot/mitgliedschaft";
-      if (params.teilnehmer === "yes") {
+      if (params.get('teilnehmer') === "yes") {
         path = "https://achtsamkeitsakademie.de/angebot/jammerfasten";
       }
-      delete params?.teilnehmer;
+      params.delete('teilnehmer');
       return NextResponse.redirect(path + params.toString());
     } else if (request.nextUrl.pathname === "/meditationsexperiment/heute") {
       const now = Math.floor(Date.now() / 1000);
