@@ -9,14 +9,14 @@ export function middleware(request) {
   ) {
     if (request.nextUrl.pathname === "/aa-angebot") {
       // console.log(request.nextUrl.search);
-      const params = new URLSearchParams(request.nextUrl.search);
-      // console.log(params);
+      const params = request.nextUrl.searchParams;
+      console.log(params);
       let path = "https://achtsamkeitsakademie.de/angebot/mitgliedschaft";
-      if (params.get('teilnehmer') === "yes") {
+      if (params.get("teilnehmer") === "yes") {
         path = "https://achtsamkeitsakademie.de/angebot/jammerfasten";
       }
-      params.delete('teilnehmer');
-      return NextResponse.redirect(path + params.toString());
+      params.delete("teilnehmer");
+      return NextResponse.redirect(path + "?" + params.toString());
     } else if (request.nextUrl.pathname === "/meditationsexperiment/heute") {
       const now = Math.floor(Date.now() / 1000);
       let path = "https://meditationsexperiment.de/2023/tag-7";
