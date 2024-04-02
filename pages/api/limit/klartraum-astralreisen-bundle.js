@@ -3,12 +3,12 @@ export default function handler(req, res) {
   res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
   res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
   if (req.method === "OPTIONS") {
-    // Stop the middleware chain here for OPTIONS requests
+    // Stop the request here for OPTIONS requests
     return res.status(200).end();
   }
 
   // Define the start and end dates in Berlin time
-  const startTime = new Date("2024-04-02T14:00:00+02:00"); // 3rd of April, 2024 at 00:00 Berlin time
+  const startTime = new Date("2024-04-03T14:00:00+02:00"); // 3rd of April, 2024 at 00:00 Berlin time
   const endTime = new Date("2024-04-05T22:23:09+02:00"); // 5th of April, 2024 at 00:00 Berlin time
 
   // Get the current time
@@ -30,5 +30,5 @@ export default function handler(req, res) {
   limitValue = Math.min(currentLimit, 50);
 
   // Return the limit value as JSON
-  res.status(200).json({ limit: limitValue });
+  return res.status(200).json({ limit: limitValue });
 }
