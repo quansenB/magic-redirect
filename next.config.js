@@ -22,175 +22,179 @@ const nextConfig = {
       // },
       // EFPMC
       {
-        source: '/efpmc',
+        source: "/efpmc",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'WBR-IWI-FQZ-OES',
+            type: "query",
+            key: "var",
+            value: "WBR-IWI-FQZ-OES",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/7b0b4136',
+        destination: "https://dfl0.us/s/7b0b4136",
       },
       {
-        source: '/efpmc',
+        source: "/efpmc",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'WBR-61X-XYR-GS7',
+            type: "query",
+            key: "var",
+            value: "WBR-61X-XYR-GS7",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/eb1a3cf5',
+        destination: "https://dfl0.us/s/eb1a3cf5",
       },
       {
-        source: '/efpmc',
+        source: "/efpmc",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'WBR-MS4-PWL-ZV9',
+            type: "query",
+            key: "var",
+            value: "WBR-MS4-PWL-ZV9",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/510158cb',
+        destination: "https://dfl0.us/s/510158cb",
       },
       {
-        source: '/efpmc',
+        source: "/efpmc",
         permanent: false,
-        destination: 'https://dfl0.us/s/277f2ace',
+        destination: "https://dfl0.us/s/277f2ace",
       },
       {
-        source: '/efpmc-tour',
+        source: "/efpmc-tour",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'WBR-IWI-FQZ-OES',
+            type: "query",
+            key: "var",
+            value: "WBR-IWI-FQZ-OES",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/238772cd',
+        destination: "https://dfl0.us/s/238772cd",
       },
       {
-        source: '/efpmc-tour',
+        source: "/efpmc-tour",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'WBR-61X-XYR-GS7',
+            type: "query",
+            key: "var",
+            value: "WBR-61X-XYR-GS7",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/156465c8',
+        destination: "https://dfl0.us/s/156465c8",
       },
       {
-        source: '/efpmc-tour',
+        source: "/efpmc-tour",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'WBR-MS4-PWL-ZV9',
+            type: "query",
+            key: "var",
+            value: "WBR-MS4-PWL-ZV9",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/d18cafb8',
+        destination: "https://dfl0.us/s/d18cafb8",
       },
       {
-        source: '/efpmc-tour',
+        source: "/efpmc-tour",
         permanent: false,
-        destination: 'https://dfl0.us/s/3d71ec46',
+        destination: "https://dfl0.us/s/3d71ec46",
       },
       // AKMC
       {
-        source: '/akmc',
+        source: "/akmc",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'bdg',
+            type: "query",
+            key: "var",
+            value: "bdg",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/1dc08470',
+        destination: "https://dfl0.us/s/1dc08470",
       },
       {
-        source: '/akmc',
+        source: "/akmc",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'big',
+            type: "query",
+            key: "var",
+            value: "big",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/cee53aee',
+        destination: "https://dfl0.us/s/cee53aee",
       },
       {
-        source: '/akmc',
+        source: "/akmc",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'cdg',
+            type: "query",
+            key: "var",
+            value: "cdg",
           },
         ],
         permanent: false,
-        destination: 'https://dfl0.us/s/1e804926',
+        destination: "https://dfl0.us/s/1e804926",
       },
       {
-        source: '/akmc',
+        source: "/akmc",
         permanent: false,
-        destination: 'https://dfl0.us/s/6cb9190b',
+        destination: "https://dfl0.us/s/6cb9190b",
       },
       {
-        source: '/akmc-tour',
+        source: "/akmc-tour",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'bdg',
+            type: "query",
+            key: "var",
+            value: "bdg",
           },
         ],
         permanent: false,
-        destination: 'https://peter-beer.de/webinar/angst-loslassen/bdg/produkttour-kurs',
+        destination:
+          "https://peter-beer.de/webinar/angst-loslassen/bdg/produkttour-kurs",
       },
       {
-        source: '/akmc-tour',
+        source: "/akmc-tour",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'big',
+            type: "query",
+            key: "var",
+            value: "big",
           },
         ],
         permanent: false,
-        destination: 'https://peter-beer.de/webinar/angst-loslassen/big/produkttour-kurs',
+        destination:
+          "https://peter-beer.de/webinar/angst-loslassen/big/produkttour-kurs",
       },
       {
-        source: '/akmc-tour',
+        source: "/akmc-tour",
         has: [
           {
-            type: 'query',
-            key: 'var',
-            value: 'cdg',
+            type: "query",
+            key: "var",
+            value: "cdg",
           },
         ],
         permanent: false,
-        destination: 'https://peter-beer.de/webinar/angst-loslassen/cdg/produkttour-kurs',
+        destination:
+          "https://peter-beer.de/webinar/angst-loslassen/cdg/produkttour-kurs",
       },
       {
-        source: '/akmc-tour',
+        source: "/akmc-tour",
         permanent: false,
-        destination: 'https://peter-beer.de/webinar/angst-loslassen/produkttour-kurs',
+        destination:
+          "https://peter-beer.de/webinar/angst-loslassen/produkttour-kurs",
       },
     ];
   },
   async rewrites() {
     return {
-      beforeFiles: [
+      fallback: [
         {
           source: "/:slug*",
           destination:
