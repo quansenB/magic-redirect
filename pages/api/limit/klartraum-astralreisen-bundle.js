@@ -1,4 +1,12 @@
 export default function handler(req, res) {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "GET, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  if (req.method === "OPTIONS") {
+    // Stop the middleware chain here for OPTIONS requests
+    return res.status(200).end();
+  }
+
   // Define the start and end dates in Berlin time
   const startTime = new Date("2024-04-02T14:00:00+02:00"); // 3rd of April, 2024 at 00:00 Berlin time
   const endTime = new Date("2024-04-05T22:23:09+02:00"); // 5th of April, 2024 at 00:00 Berlin time
