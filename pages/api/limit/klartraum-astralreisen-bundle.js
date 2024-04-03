@@ -8,7 +8,7 @@ export default function handler(req, res) {
   }
 
   // Define the start and end dates in Berlin time
-  const startTime = new Date("2024-04-03T14:00:00+02:00"); // 3rd of April, 2024 at 00:00 Berlin time
+  const startTime = new Date("2024-04-03T10:00:00+02:00"); // 3rd of April, 2024 at 00:00 Berlin time
   const endTime = new Date("2024-04-05T22:23:09+02:00"); // 5th of April, 2024 at 00:00 Berlin time
 
   // Get the current time
