@@ -190,6 +190,17 @@ const nextConfig = {
         destination:
           "https://peter-beer.de/webinar/angst-loslassen/produkttour-kurs",
       },
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'saraerb.at',
+          },
+        ],
+        destination: 'https://saraerbofficial.com/:path*',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {
