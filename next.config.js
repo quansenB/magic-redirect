@@ -198,7 +198,7 @@ const nextConfig = {
             value: 'saraerb.at',
           },
         ],
-        destination: 'https://saraerbofficial.com/:path*',
+        destination: 'https://saraerbofficial.com/',
         permanent: true,
       },
     ];
