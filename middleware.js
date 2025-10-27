@@ -51,11 +51,11 @@ export function middleware(request) {
       const cutoffMs = Date.UTC(2025, 10, 1, 0, 0, 0); 
       if (Date.now() < cutoffMs) {
         return NextResponse.redirect(
-          "https://example.com/ki-champion-dojo/"
+          "https://theagilehabit.de/ki-champion-dojo/"
         );
       } else {
         return NextResponse.redirect(
-          "https://example.com/ki-champion-dojo-abgelaufen/"
+          "https://theagilehabit.de/ki-champion-dojo-abgelaufen/"
         );
       }
     }
