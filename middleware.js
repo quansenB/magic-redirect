@@ -47,6 +47,17 @@ export function middleware(request) {
           "https://us06web.zoom.us/j/89475167160?pwd=OcJVjUtQ5fbaOpojMha58zrNSUfTcb.1"
         );
       }
+    } else if (request.nextUrl.pathname === "/ki-champion-dojo") {
+      const cutoffMs = Date.UTC(2025, 10, 1, 0, 0, 0); 
+      if (Date.now() < cutoffMs) {
+        return NextResponse.redirect(
+          "https://example.com/ki-champion-dojo/"
+        );
+      } else {
+        return NextResponse.redirect(
+          "https://example.com/ki-champion-dojo-abgelaufen/"
+        );
+      }
     }
   }
 }
